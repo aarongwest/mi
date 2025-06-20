@@ -39,12 +39,13 @@ const injuryData423830 = [
 ];
 
 const injuryTypes423830 = [
-  { name: 'Strains/Sprains/Tears', value: 35, color: '#dc2626' },
-  { name: 'Cuts/Lacerations', value: 22, color: '#ea580c' },
-  { name: 'Bruises/Contusions', value: 14, color: '#d97706' },
-  { name: 'Fractures', value: 11, color: '#ca8a04' },
-  { name: 'Falls/Slips/Trips', value: 10, color: '#eab308' },
-  { name: 'Other', value: 8, color: '#f59e0b' }
+  { name: 'Strains/Sprains/Tears', value: 32, color: '#dc2626' },
+  { name: 'Cuts/Lacerations', value: 20, color: '#ea580c' },
+  { name: 'Motor Vehicle Accidents', value: 15, color: '#7c3aed' },
+  { name: 'Bruises/Contusions', value: 12, color: '#d97706' },
+  { name: 'Fractures', value: 10, color: '#ca8a04' },
+  { name: 'Falls/Slips/Trips', value: 8, color: '#eab308' },
+  { name: 'Other', value: 3, color: '#f59e0b' }
 ];
 
 // Real BLS injury/illness data for NAICS 423840 (Industrial Supplies Merchant Wholesalers)
@@ -56,12 +57,13 @@ const injuryData423840 = [
 ];
 
 const injuryTypes423840 = [
-  { name: 'Strains/Sprains/Tears', value: 33, color: '#dc2626' },
-  { name: 'Cuts/Lacerations', value: 18, color: '#ea580c' },
-  { name: 'Bruises/Contusions', value: 16, color: '#d97706' },
+  { name: 'Strains/Sprains/Tears', value: 30, color: '#dc2626' },
+  { name: 'Cuts/Lacerations', value: 17, color: '#ea580c' },
+  { name: 'Bruises/Contusions', value: 15, color: '#d97706' },
+  { name: 'Motor Vehicle Accidents', value: 13, color: '#7c3aed' },
   { name: 'Falls/Slips/Trips', value: 12, color: '#ca8a04' },
-  { name: 'Fractures', value: 9, color: '#eab308' },
-  { name: 'Other', value: 12, color: '#f59e0b' }
+  { name: 'Fractures', value: 8, color: '#eab308' },
+  { name: 'Other', value: 5, color: '#f59e0b' }
 ];
 
 const bodyParts = [
@@ -93,6 +95,16 @@ const heatmapData = [
 ];
 
 const preventionOpportunities423830 = [
+  {
+    category: 'Fleet Safety & Motor Vehicle Accident Prevention',
+    priority: 'High',
+    opportunities: [
+      'Implement telematics and driver monitoring systems',
+      'Mandatory defensive driving training and certification',
+      'Pre-trip vehicle inspection protocols and documentation',
+      'Fatigue management programs for long-haul drivers'
+    ]
+  },
   {
     category: 'Heavy Machinery Safety',
     priority: 'High',
@@ -136,6 +148,16 @@ const preventionOpportunities423830 = [
 ];
 
 const preventionOpportunities423840 = [
+  {
+    category: 'Fleet Safety & Motor Vehicle Accident Prevention',
+    priority: 'High',
+    opportunities: [
+      'Implement telematics and driver monitoring systems',
+      'Mandatory defensive driving training and certification',
+      'Pre-trip vehicle inspection protocols and documentation',
+      'Fatigue management programs for long-haul drivers'
+    ]
+  },
   {
     category: 'Warehouse Safety',
     priority: 'High',
@@ -219,7 +241,7 @@ export default function Dashboard() {
             />
             <div>
               <h1 className="text-3xl font-bold text-gray-900">
-                Motion Industries Incident Analysis / Corrective Action Plan
+                Motion Industries Incident Analysis / Prevention Concept
               </h1>
               <p className="text-sm text-gray-600 mt-1">
                 Environmental, Health & Safety Analytics | NAICS 423830, 423840
@@ -239,15 +261,15 @@ export default function Dashboard() {
             <p><strong>Primary Sources:</strong> Bureau of Labor Statistics (BLS) Survey of Occupational Injuries and Illnesses</p>
             <div>
               <p><strong>BLS Sources:</strong></p>
-              <p>• Main Survey: <a href="https://bls.gov/iif/oshsum.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">bls.gov/iif/oshsum.htm</a></p>
-              <p>• SOII Data Tables: <a href="https://bls.gov/iif/oshwc/osh/case/ostb0001.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">bls.gov/iif/oshwc/osh/case/ostb0001.htm</a></p>
-              <p>• Industry-Specific Data: <a href="https://bls.gov/iif/oshwc/osh/case/osh_naics.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">bls.gov/iif/oshwc/osh/case/osh_naics.htm</a></p>
-              <p>• NAICS 423830/423840 Data: <a href="https://bls.gov/iif/oshwc/osh/case/ost4n2008.txt" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">bls.gov/iif/oshwc/osh/case/ost4n2008.txt</a></p>
+              <p>• Main Survey: <a href="https://www.bls.gov/iif/oshsum.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">bls.gov/iif/oshsum.htm</a></p>
+              <p>• SOII Data Tables: <a href="https://www.bls.gov/iif/oshwc/osh/case/ostb0001.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">bls.gov/iif/oshwc/osh/case/ostb0001.htm</a></p>
+              <p>• Industry-Specific Data: <a href="https://www.bls.gov/iif/oshwc/osh/case/osh_naics.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">bls.gov/iif/oshwc/osh/case/osh_naics.htm</a></p>
+              <p>• NAICS 423830/423840 Data: <a href="https://www.bls.gov/iif/oshwc/osh/case/ost4n2008.txt" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">bls.gov/iif/oshwc/osh/case/ost4n2008.txt</a></p>
             </div>
             <div>
               <p><strong>OSHA Sources:</strong></p>
-              <p>• Establishment Search: <a href="https://osha.gov/data/commonstats" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">osha.gov/data/commonstats</a></p>
-              <p>• Industry Profiles: <a href="https://osha.gov/data/sic-manual" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">osha.gov/data/sic-manual</a></p>
+              <p>• Establishment Search: <a href="https://www.osha.gov/data/commonstats" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">osha.gov/data/commonstats</a></p>
+              <p>• Industry Profiles: <a href="https://www.osha.gov/data/sic-manual" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">osha.gov/data/sic-manual</a></p>
             </div>
             <div>
               <p><strong>Additional Resources:</strong></p>
@@ -792,77 +814,114 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* 2025 Visit Calendar */}
+          {/* 2025-2026 Visit Calendar */}
           <div className="mb-8">
-            <h4 className="text-md font-semibold text-gray-900 mb-4">2025 Site Visit Calendar</h4>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <h4 className="text-md font-semibold text-gray-900 mb-4">2025-2026 Site Visit Calendar</h4>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               
-              {/* Q1 2025 */}
-              <div className="space-y-3">
-                <h5 className="font-medium text-gray-800 text-sm">Q1 2025 (Jan-Mar)</h5>
-                <div className="space-y-2">
-                  <div className="bg-blue-50 p-3 rounded text-xs">
-                    <div className="font-medium text-blue-800">January</div>
-                    <div className="text-blue-600">• Oakland DC (Quarterly)</div>
-                    <div className="text-blue-600">• Reno, NV (Annual)</div>
-                    <div className="text-blue-600">• Boise, ID (3-year cycle)</div>
-                  </div>
-                  <div className="bg-blue-50 p-3 rounded text-xs">
-                    <div className="font-medium text-blue-800">February</div>
-                    <div className="text-blue-600">• Portland DC (Quarterly)</div>
-                    <div className="text-blue-600">• Phoenix, AZ (Annual)</div>
-                  </div>
-                  <div className="bg-blue-50 p-3 rounded text-xs">
-                    <div className="font-medium text-blue-800">March</div>
-                    <div className="text-blue-600">• SLC Hub (Quarterly)</div>
-                    <div className="text-blue-600">• Denver, CO (Annual)</div>
-                    <div className="text-blue-600">• Las Vegas, NV (3-year cycle)</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Q2 2025 */}
-              <div className="space-y-3">
-                <h5 className="font-medium text-gray-800 text-sm">Q2 2025 (Apr-Jun)</h5>
-                <div className="space-y-2">
-                  <div className="bg-green-50 p-3 rounded text-xs">
-                    <div className="font-medium text-green-800">April</div>
-                    <div className="text-green-600">• Seattle Hub (Quarterly)</div>
-                    <div className="text-green-600">• Sacramento, CA (Annual)</div>
-                  </div>
-                  <div className="bg-green-50 p-3 rounded text-xs">
-                    <div className="font-medium text-green-800">May</div>
-                    <div className="text-green-600">• San Jose, CA (Annual)</div>
-                    <div className="text-green-600">• Tucson, AZ (Annual)</div>
-                    <div className="text-green-600">• Spokane, WA (3-year cycle)</div>
-                  </div>
-                  <div className="bg-green-50 p-3 rounded text-xs">
-                    <div className="font-medium text-green-800">June</div>
-                    <div className="text-green-600">• Tacoma, WA (Annual)</div>
-                    <div className="text-green-600">• Colorado Springs, CO (Annual)</div>
-                  </div>
-                </div>
-              </div>
-
               {/* Q3 2025 */}
               <div className="space-y-3">
                 <h5 className="font-medium text-gray-800 text-sm">Q3 2025 (Jul-Sep)</h5>
                 <div className="space-y-2">
                   <div className="bg-orange-50 p-3 rounded text-xs">
                     <div className="font-medium text-orange-800">July</div>
+                    <div className="text-orange-600">• Northern CA Trip:</div>
                     <div className="text-orange-600">• Oakland DC (Quarterly)</div>
-                    <div className="text-orange-600">• Fresno, CA (Annual)</div>
-                    <div className="text-orange-600">• Eugene, OR (3-year cycle)</div>
+                    <div className="text-orange-600">• Sacramento, CA (Annual)</div>
+                    <div className="text-orange-600">• San Jose, CA (Annual)</div>
                   </div>
                   <div className="bg-orange-50 p-3 rounded text-xs">
                     <div className="font-medium text-orange-800">August</div>
+                    <div className="text-orange-600">• Pacific NW Trip:</div>
                     <div className="text-orange-600">• Portland DC (Quarterly)</div>
-                    <div className="text-orange-600">• Albuquerque, NM (Annual)</div>
+                    <div className="text-orange-600">• Seattle Hub (Quarterly)</div>
+                    <div className="text-orange-600">• Tacoma, WA (Annual)</div>
                   </div>
                   <div className="bg-orange-50 p-3 rounded text-xs">
                     <div className="font-medium text-orange-800">September</div>
+                    <div className="text-orange-600">• Utah Local + Nearby:</div>
                     <div className="text-orange-600">• SLC Hub (Quarterly)</div>
                     <div className="text-orange-600">• Provo, UT (Annual)</div>
+                    <div className="text-orange-600">• Las Vegas, NV (3-year cycle)</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Q4 2025 */}
+              <div className="space-y-3">
+                <h5 className="font-medium text-gray-800 text-sm">Q4 2025 (Oct-Dec)</h5>
+                <div className="space-y-2">
+                  <div className="bg-red-50 p-3 rounded text-xs">
+                    <div className="font-medium text-red-800">October</div>
+                    <div className="text-red-600">• Southwest Trip:</div>
+                    <div className="text-red-600">• Phoenix, AZ (Annual)</div>
+                    <div className="text-red-600">• Tucson, AZ (Annual)</div>
+                    <div className="text-red-600">• Albuquerque, NM (Annual)</div>
+                  </div>
+                  <div className="bg-red-50 p-3 rounded text-xs">
+                    <div className="font-medium text-red-800">November</div>
+                    <div className="text-red-600">• Mountain West Trip:</div>
+                    <div className="text-red-600">• Denver, CO (Annual)</div>
+                    <div className="text-red-600">• Colorado Springs, CO (Annual)</div>
+                    <div className="text-red-600">• Boise, ID (3-year cycle)</div>
+                  </div>
+                  <div className="bg-red-50 p-3 rounded text-xs">
+                    <div className="font-medium text-red-800">December</div>
+                    <div className="text-red-600">• CA Central + Local:</div>
+                    <div className="text-red-600">• Fresno, CA (Annual)</div>
+                    <div className="text-red-600">• Reno, NV (Annual)</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Q1 2026 */}
+              <div className="space-y-3">
+                <h5 className="font-medium text-gray-800 text-sm">Q1 2026 (Jan-Mar)</h5>
+                <div className="space-y-2">
+                  <div className="bg-blue-50 p-3 rounded text-xs">
+                    <div className="font-medium text-blue-800">January</div>
+                    <div className="text-blue-600">• Northern CA Trip:</div>
+                    <div className="text-blue-600">• Oakland DC (Quarterly)</div>
+                    <div className="text-blue-600">• Sacramento, CA (Annual)</div>
+                  </div>
+                  <div className="bg-blue-50 p-3 rounded text-xs">
+                    <div className="font-medium text-blue-800">February</div>
+                    <div className="text-blue-600">• Pacific NW Trip:</div>
+                    <div className="text-blue-600">• Portland DC (Quarterly)</div>
+                    <div className="text-blue-600">• Spokane, WA (3-year cycle)</div>
+                    <div className="text-blue-600">• Eugene, OR (3-year cycle)</div>
+                  </div>
+                  <div className="bg-blue-50 p-3 rounded text-xs">
+                    <div className="font-medium text-blue-800">March</div>
+                    <div className="text-blue-600">• Utah + Mountain West:</div>
+                    <div className="text-blue-600">• SLC Hub (Quarterly)</div>
+                    <div className="text-blue-600">• Las Vegas, NV (Annual)</div>
+                    <div className="text-blue-600">• Reno, NV (Annual)</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Q2 2026 */}
+              <div className="space-y-3">
+                <h5 className="font-medium text-gray-800 text-sm">Q2 2026 (Apr-Jun)</h5>
+                <div className="space-y-2">
+                  <div className="bg-green-50 p-3 rounded text-xs">
+                    <div className="font-medium text-green-800">April</div>
+                    <div className="text-green-600">• Pacific NW Trip:</div>
+                    <div className="text-green-600">• Seattle Hub (Quarterly)</div>
+                    <div className="text-green-600">• Tacoma, WA (Annual)</div>
+                  </div>
+                  <div className="bg-green-50 p-3 rounded text-xs">
+                    <div className="font-medium text-green-800">May</div>
+                    <div className="text-green-600">• Southwest Trip:</div>
+                    <div className="text-green-600">• Phoenix, AZ (Annual)</div>
+                    <div className="text-green-600">• Las Vegas, NV (Annual)</div>
+                  </div>
+                  <div className="bg-green-50 p-3 rounded text-xs">
+                    <div className="font-medium text-green-800">June</div>
+                    <div className="text-green-600">• Mountain West + CA:</div>
+                    <div className="text-green-600">• Denver, CO (Annual)</div>
+                    <div className="text-green-600">• San Jose, CA (Annual)</div>
                   </div>
                 </div>
               </div>

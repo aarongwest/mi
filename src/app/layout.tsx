@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Motion Industries Incident Analysis / Corrective Action Plan',
-  description: 'Incident Analysis and Corrective Action Plan Dashboard for Motion Industries - NAICS 423830, 423840',
+  title: 'Motion Industries Incident Analysis / Prevention Concept',
+  description: 'Incident Analysis and Prevention Concept Dashboard for Motion Industries - NAICS 423830, 423840',
   keywords: 'EHS, safety, Motion Industries, workplace safety, injury prevention, OSHA, industrial safety',
   authors: [{ name: 'EHS Analytics Team' }],
   viewport: 'width=device-width, initial-scale=1',
